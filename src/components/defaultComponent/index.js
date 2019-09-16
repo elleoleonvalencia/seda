@@ -64,6 +64,7 @@ class defaultComponent extends Component {
 								<Col xs={{ span: 11, offset: 1 }} lg={{ span: 6, offset: 2 }}>
 									<Card style={{ width: 400, borderRadius: '10px' }}>
 										<br/>
+										jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
 										<br/>
 										<br/>
 										<br/>
