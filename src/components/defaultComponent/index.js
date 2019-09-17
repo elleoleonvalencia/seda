@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { Layout, Row, Col } from 'antd';
 import Navbar from '../navbar';
-import Card1 from '../card';
 import Breadcrumb1 from '../breadcrumb';
+import ModalAvanzado from '../modaAvanzado';
 import Footer1 from '../footer';
+import Card1 from '../card';
 import { GlobalStyleL } from '../../styles/Styles';
 import est1 from '../../images/est1.jpg'
 import est2 from '../../images/est2.jpg'
 import est3 from '../../images/est3.jpg'
 import est4 from '../../images/est4.jpg'
 import est5 from '../../images/est5.jpg'
-import est6 from '../../images/est6.jpg'
 
 const { Header, Footer, Content } = Layout;
 // import dropdown from './dropdown';
@@ -51,8 +51,8 @@ class defaultComponent extends Component {
 									<Card1 title='Est5' descripcion='est5' fotos={est5} />
 								</Col>
 								<Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}>
-									<Card1 title='Est6' descripcion='est6' fotos={est6} />
-								</Col>
+									<ModalAvanzado/>
+								</Col> 
 							</Row>
 						</Content>
 						<Footer style={{ backgroundColor: '#ffffff', bottom: '0', left: '0', right: '0' }}>

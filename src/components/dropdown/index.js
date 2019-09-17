@@ -30,7 +30,6 @@ class dropdown extends Component {
                             <Option value="SymAgricUrbanaPoint.tecnologia">Tecnología</Option>
                             <Option value="SymAgricUrbanaPoint.ministerio">Ministerio</Option>
                             <Option value="SymAgricUrbanaPoint.consejoPopular">Consejo Popular</Option>
-                            <Option value="SymAgricUrbanaPoint.municipio">Municipio</Option>
                             <Option value="SymAgricUrbanaPoint.provincia">Provincia</Option>
                             <Option value="SymAgricUrbanaPoint.entidad">Entidad</Option>
                             <Option value="SymAgricUrbanaPoint.productor">Productor</Option>
