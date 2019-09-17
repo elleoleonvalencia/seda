@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { Menu } from 'antd';
 import Icono_SedA from '../../images/icono-SedA.png'
 import { Imagen } from '../../styles/Styles';
@@ -10,7 +10,9 @@ class navbar extends Component {
             <div>
                 <div className="logo">
                     <Imagen src={Icono_SedA} />
-                    <h1 style={{ color: 'rgba(255, 255, 255, 0.65)',cursor: 'pointer' }}>SedA</h1>
+                    <Link to="/manicaragua/manicaragua">
+                        <h1 style={{ color: 'rgba(255, 255, 255, 0.65)' }}>SedA</h1>
+                    </Link>
                 </div>
                 <Menu
                     theme="dark"
