@@ -10,14 +10,14 @@ class navbar extends Component {
             <div>
                 <div className="logo">
                     <Imagen src={Icono_SedA} />
-                    <h1 style={{ color: '#ffff' }}>SedA</h1>
+                    <h1 style={{ color: 'rgba(255, 255, 255, 0.65)',cursor: 'pointer' }}>SedA</h1>
                 </div>
                 <Menu
                     theme="dark"
                     className="menu-inicio"
                     mode="horizontal"
                     defaultSelectedKeys={['1']}
-                    style={{ lineHeight: '64px' }}
+                    style={{ lineHeight: '40px', marginTop: '5px' }}
                 >
                     <Menu.Item key="1">Ayuda</Menu.Item>
                     <Menu.Item key="2">Acerca de...</Menu.Item>
