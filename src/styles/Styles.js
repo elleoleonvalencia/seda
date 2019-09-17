@@ -13,7 +13,7 @@ const GlobalStyleL = styled.div`
   float: right;
 }
 &#components-layout-demo-top .ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
-  background-color: #20a0f7;
+  background-color: transparent;
 }
 &#components-layout-demo-top .ant-layout {
   display: -ms-flexbox;
@@ -25,6 +25,37 @@ const GlobalStyleL = styled.div`
   min-height: 0;
   background: #fff;
 }
+&#components-layout-demo-top .card__three {
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale3d(0, 0, 1);
+    transition: transform .3s ease-out 0s;
+    background: rgba(255, 255, 255, .1);
+    content: '';
+    pointer-events: none;
+  }
+
+  &::before {
+    transform-origin: left top;
+  }
+
+  &::after {
+    transform-origin: right bottom;
+  }
+
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+}
 `
 const Imagen = styled.img`
   width: 55px;
@@ -33,5 +64,8 @@ const Imagen = styled.img`
   margin-right: 10px;
   float: left;
 `;
-
-export { GlobalStyleL, Imagen }
+const Imagen1 = styled.img`
+  width: 300px;
+  height: 100px;
+`;
+export { GlobalStyleL, Imagen,Imagen1 }
