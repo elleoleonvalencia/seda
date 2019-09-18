@@ -54,7 +54,8 @@ class gg extends Component {
               "dimension": "SymAgricUrbanaPoint.municipio",
               "operator": "equals",
               "values": [
-                this.props.municipio]
+                "Remedios"
+              ]
             }
           ]
         }}
