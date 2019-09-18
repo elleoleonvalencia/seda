@@ -13,7 +13,7 @@ class card extends Component {
                     className='card__three'
                     style={{ width: 350, borderRadius: '15px' }}
                     cover={<img alt="ffff" style={{ borderTopRightRadius: '15px', borderTopLeftRadius: '15px' }} src={this.props.fotos} />}
-                    onClick={()=>this.props.kk()}
+                    onClick={()=>this.props.show()}
                 >
                     <Meta title={this.props.title} description={this.props.descripcion} />
                 </Card>

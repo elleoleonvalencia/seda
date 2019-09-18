@@ -22,6 +22,17 @@ const GlobalStyleL = styled.div`
 &#components-layout-demo-top .menu-inicio li:hover {
   border-bottom: 3px solid #ffffff;
 }
+&#components-layout-demo-top h1.Iniciolink {
+  color: rgba(255, 255, 255, 0.65);
+}
+&#components-layout-demo-top h1.Iniciolink:hover {
+  color: #ffffff;
+  text-color: #ffffff;
+}
+&#components-layout-demo-top h1.Iniciolink:active {
+  color: #ffffff;
+  text-color: #ffffff;
+}
 &#components-layout-demo-top .ant-layout {
   display: -ms-flexbox;
   display: flex;
@@ -75,4 +86,4 @@ const Imagen1 = styled.img`
   width: 300px;
   height: 100px;
 `;
-export { GlobalStyleL, Imagen,Imagen1 }
+export { GlobalStyleL, Imagen, Imagen1 }

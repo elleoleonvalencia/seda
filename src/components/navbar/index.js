@@ -10,8 +10,8 @@ class navbar extends Component {
             <div>
                 <div className="logo">
                     <Imagen src={Icono_SedA} />
-                    <Link to="/manicaragua/manicaragua">
-                        <h1 style={{ color: 'rgba(255, 255, 255, 0.65)' }}>SedA</h1>
+                    <Link to="/manicaragua/manicaragua" className="Iniciolink">
+                        <h1 className="Iniciolink">SedA</h1>
                     </Link>
                 </div>
                 <Menu

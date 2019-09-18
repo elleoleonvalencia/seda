@@ -26,7 +26,7 @@ class defaultComponent extends Component {
 						<Header>
 							< Navbar />
 						</Header>
-						<Content style={{ paddingLeft: '100px', paddingTop: '20px', paddingBottom: '50px', paddingRight: '100px' }}>
+						<Content style={{ paddingLeft: '100px', paddingTop: '20px', paddingBottom: '20px', paddingRight: '100px' }}>
 							<Row>
 								<Col span={24}>
 									<Breadcrumb1 />
