@@ -16,12 +16,10 @@ class modalAvanzado extends Component {
 
     camposMeasures = async measures => {
         await this.setState({ measures: measures })
-        console.log(measures);
     }
 
     camposDimensions = async dimensions => {
         await this.setState({ dimensions: dimensions })
-        console.log(dimensions);
     }
     showModal = () => {
         this.setState({
@@ -48,7 +46,7 @@ class modalAvanzado extends Component {
                 >
                     <div>
                         <Dropdown camposMeasures={this.camposMeasures} camposDimensions={this.camposDimensions} />
-                        <GraficoGeneral camposMeasures={this.state.measures} camposDimensions={this.state.dimensions} />
+                        <GraficoGeneral camposMeasures={this.state.measures} camposDimensions={this.state.dimensions} municipio={this.props.match.params.municipio}/>
                     </div>
                 </Modal>
             </div>

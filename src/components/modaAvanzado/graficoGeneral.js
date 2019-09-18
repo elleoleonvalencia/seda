@@ -49,7 +49,14 @@ class gg extends Component {
           "measures": this.props.camposMeasures,
           "timeDimensions": [],
           "dimensions": this.props.camposDimensions,
-          "filters": []
+          "filters": [
+            {
+              "dimension": "SymAgricUrbanaPoint.municipio",
+              "operator": "equals",
+              "values": [
+                this.props.municipio]
+            }
+          ]
         }}
         cubejsApi={cubejsApi}
         render={this.renderChart(this.barRender)}

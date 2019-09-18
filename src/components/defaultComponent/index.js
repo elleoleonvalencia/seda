@@ -51,8 +51,8 @@ class defaultComponent extends Component {
 									<Card1 title='Est5' descripcion='est5' fotos={est5} />
 								</Col>
 								<Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}>
-									<ModalAvanzado/>
-								</Col> 
+									<ModalAvanzado />
+								</Col>
 							</Row>
 						</Content>
 						<Footer style={{ backgroundColor: '#ffffff', bottom: '0', left: '0', right: '0' }}>

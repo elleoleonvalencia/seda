@@ -15,7 +15,7 @@ const Router = () => (
             
             <Route path="/La Herradura" component={orgLaHerraduraMan} />
             <Route path="/Los Canarreos" component={orgLosCanarreosMan} /> */}
-            <Route path="/manicaragua/:municipio" component={defaultComponent} />
+            <Route path="/:municipio" component={defaultComponent} />
 
             <Route path="/Jibacoa" component={orgJibacoaMan} />
 

@@ -14,12 +14,10 @@ class orgLasCuevas extends Component {
 
 	camposMeasures = async measures => {
 		await this.setState({ measures: measures })
-		console.log(measures);
 	}
 
 	camposDimensions = async dimensions => {
 		await this.setState({ dimensions: dimensions })
-		console.log(dimensions);
 	}
 
 	render() {
