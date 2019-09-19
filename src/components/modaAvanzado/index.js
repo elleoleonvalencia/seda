@@ -11,7 +11,7 @@ class modalAvanzado extends Component {
         visible: false,
         measures: ["SymAgricUrbanaPoint.count"],
         dimensions: ["SymAgricUrbanaPoint.tecnologia"],
-        tipoGrafic: 'bar'
+        tipoGrafic: ''
     };
 
     camposMeasures = async measures => {

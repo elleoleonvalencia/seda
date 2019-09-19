@@ -20,7 +20,7 @@ class navbar extends Component {
                 <Row>
                     <Col span={9}></Col>
                     <Col span={6}>
-                    <spam>Versión 1.0</spam>
+                        <spam>Versión 1.0</spam>
                     </Col>
                     <Col span={9}></Col>
                 </Row>
@@ -28,7 +28,7 @@ class navbar extends Component {
                 <Row>
                     <Col span={3}></Col>
                     <Col span={18}>
-                    <spam>Desarrollado X Grupo Geomática ENPA UEB VC 2019</spam>
+                        <spam>Desarrollado X Grupo Geomática ENPA UEB VC 2019</spam>
                     </Col>
                     <Col span={3}></Col>
                 </Row>
@@ -43,9 +43,7 @@ class navbar extends Component {
             <div>
                 <div className="logo">
                     <Imagen src={Icono_SedA} />
-                    <Link to="/manicaragua" className="Iniciolink">
-                        <h1 className="Iniciolink">SedA</h1>
-                    </Link>
+                    <h1 className="Iniciolink">SedA</h1>
                 </div>
                 <Menu
                     theme="dark"

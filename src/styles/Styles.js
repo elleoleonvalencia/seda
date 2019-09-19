@@ -22,14 +22,6 @@ const GlobalStyleL = styled.div`
 &#components-layout-demo-top h1.Iniciolink {
   color: rgba(255, 255, 255, 0.65);
 }
-&#components-layout-demo-top h1.Iniciolink:hover {
-  color: #ffffff;
-  text-color: #ffffff;
-}
-&#components-layout-demo-top h1.Iniciolink:active {
-  color: #ffffff;
-  text-color: #ffffff;
-}
 &#components-layout-demo-top .ant-layout {
   display: -ms-flexbox;
   display: flex;
