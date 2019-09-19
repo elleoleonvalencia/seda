@@ -82,7 +82,7 @@ class dropdown extends Component {
                         </Select>
                     </Col>
                     <Col span={3} pull={21}>
-                        <strong>Categorías (eje X):</strong>
+                        <strong>Tipo de Gráfico:</strong>
                     </Col>
                 </Row>
             </div>
