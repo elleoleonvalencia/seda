@@ -14,15 +14,10 @@ const GlobalStyleL = styled.div`
 }
 &#components-layout-demo-top .ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
   background-color: transparent;
-  border-bottom: 3px solid #ffffff;
 }
 &#components-layout-demo-top .ant-menu-item {
-  border-bottom: 3px solid transparent;
-  margin-left: 10px;
+  margin-left: 10px;  
   text-align: center;
-}
-&#components-layout-demo-top .menu-inicio li:hover {
-  border-bottom: 3px solid #ffffff;
 }
 &#components-layout-demo-top h1.Iniciolink {
   color: rgba(255, 255, 255, 0.65);
