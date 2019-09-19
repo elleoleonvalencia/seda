@@ -33,24 +33,24 @@ class defaultComponent extends Component {
 								</Col>
 							</Row>
 							<Row>
-								<Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}>
+								<Col xs={{ span: 24}} sm={{ span: 24 }} md={{ span: 10, offset: 2 }} lg={{ span: 6, offset: 2 }}>
 									<Card1 title='Est1' descripcion='est1' fotos={est1} />
 								</Col>
-								<Col xs={{ span: 11, offset: 1 }} lg={{ span: 6, offset: 2 }}>
+								<Col xs={{ span: 24}}  sm={{ span: 24 }} md={{ span: 10, offset: 2 }} lg={{ span: 6, offset: 2 }}>
 									<Card1 title='Est2' descripcion='est2' fotos={est2} />
 								</Col>
-								<Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}>
+								<Col xs={{ span: 24}} sm={{ span: 24 }}  md={{ span: 10, offset: 2 }} lg={{ span: 6, offset: 2 }}>
 									<Card1 title='Est3' descripcion='est3' fotos={est3} />
 								</Col>
 							</Row>
 							<Row style={{ marginTop: '60px' }}>
-								<Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}>
+								<Col xs={{ span: 24}}  sm={{ span: 24 }} md={{ span: 10, offset: 2 }} lg={{ span: 6, offset: 2 }}>
 									<Card1 title='Est4' descripcion='est4' fotos={est4} />
 								</Col>
-								<Col xs={{ span: 11, offset: 1 }} lg={{ span: 6, offset: 2 }}>
+								<Col xs={{ span: 24}}  sm={{ span: 24 }} md={{ span: 10, offset: 2 }} lg={{ span: 6, offset: 2 }}>
 									<Card1 title='Est5' descripcion='est5' fotos={est5} />
 								</Col>
-								<Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}>
+								<Col xs={{ span: 24}}  sm={{ span: 24 }} md={{ span: 10, offset: 2 }} lg={{ span: 6, offset: 2 }}>
 									<ModalAvanzado />
 								</Col>
 							</Row>
