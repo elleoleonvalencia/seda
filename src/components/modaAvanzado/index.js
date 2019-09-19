@@ -4,15 +4,14 @@ import { Modal, Row, Col } from 'antd';
 import GraficoGeneral from './graficoGeneral';
 import est6 from '../../images/est6.jpg'
 import Card1 from '../card';
-
-import Dropdown from '../dropdown/index';
+import Dropdown from '../dropdown';
 
 class modalAvanzado extends Component {
     state = {
         visible: false,
         measures: ["SymAgricUrbanaPoint.count"],
         dimensions: ["SymAgricUrbanaPoint.tecnologia"],
-        tipoGrafic: ["bar"]
+        tipoGrafic: 'bar'
     };
 
     camposMeasures = async measures => {
@@ -23,7 +22,7 @@ class modalAvanzado extends Component {
         await this.setState({ dimensions: dimensions })
     }
 
-    tipoGrafic = async grafic => {
+    tipoGraficFunction = async grafic => {
         await this.setState({ tipoGrafic: grafic })
     }
 
@@ -57,7 +56,7 @@ class modalAvanzado extends Component {
                             <br />
                         </Row>
                         <Row>
-                            <Dropdown camposMeasures={this.camposMeasures} camposDimensions={this.camposDimensions} tipoGrafic={this.tipoGrafic} />
+                            <Dropdown camposMeasures={this.camposMeasures} camposDimensions={this.camposDimensions} tipoGrafic={this.tipoGraficFunction} />
                         </Row>
                         <Row>
                             <br />

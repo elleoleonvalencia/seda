@@ -76,8 +76,8 @@ class dropdown extends Component {
                         >
                             <Option value="bar">Gráfico de Barras</Option>
                             <Option value="pie">Gráfico de Pastel</Option>
-                            <Option value="area">Gráfico de Líneas</Option>
-                            <Option value="line">Gráfico de Área</Option>
+                            <Option value="line">Gráfico de Líneas</Option>
+                            <Option value="area">Gráfico de Área</Option>
                             <Option value="table">Tabla</Option>
                         </Select>
                     </Col>

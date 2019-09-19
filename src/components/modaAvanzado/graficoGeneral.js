@@ -7,6 +7,7 @@ import { Row, Col, Statistic, Table } from 'antd';
 import moment from 'moment';
 import lowerCase from 'lower-case';
 import upperCase from 'upper-case';
+import { isSwitchCase } from '@babel/types';
 
 const API_URL = "http://192.168.0.10:4000"; // change to your actual endpoint
 
@@ -16,6 +17,40 @@ const cubejsApi = cubejs(
 );
 
 class gg extends Component {
+
+  state = {
+    tipoGraficFunction: ""
+  };
+
+  componentWillMount() {
+    this.setState({ tipoGraficFunction: this.barRender })
+  }
+
+  async componentWillReceiveProps(nextprops) {
+    switch (nextprops.tipoGrafic) {
+      case "bar":
+        this.setState({ tipoGraficFunction: this.barRender })
+        break;
+
+      case "pie":
+        this.setState({ tipoGraficFunction: this.pieRender })
+        break;
+
+      case "area":
+        this.setState({ tipoGraficFunction: this.areaRender })
+        break;
+
+      case "line":
+        this.setState({ tipoGraficFunction: this.lineRender })
+        break;
+
+      case "table":
+        this.setState({ tipoGraficFunction: this.tableRender })
+
+      default:
+        break;
+    }
+  }
 
   stackedChartData = (resultSet) => {
     const data = resultSet.pivot().map(
@@ -98,7 +133,7 @@ class gg extends Component {
           ]
         }}
         cubejsApi={cubejsApi}
-        render={this.renderChart(this.barRender)}
+        render={this.renderChart(this.state.tipoGraficFunction)}
       />);
   }
 
