@@ -18,6 +18,8 @@ const GlobalStyleL = styled.div`
 }
 &#components-layout-demo-top .ant-menu-item {
   border-bottom: 3px solid transparent;
+  margin-left: 10px;
+  text-align: center;
 }
 &#components-layout-demo-top .menu-inicio li:hover {
   border-bottom: 3px solid #ffffff;

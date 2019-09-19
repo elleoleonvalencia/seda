@@ -5,6 +5,8 @@ import { Spin } from 'antd';
 import { Chart, Axis, Tooltip, Geom, Coord, Legend } from 'bizcharts';
 import { Row, Col, Statistic, Table } from 'antd';
 import moment from 'moment';
+import lowerCase from 'lower-case';
+import upperCase from 'upper-case';
 
 const API_URL = "http://192.168.0.10:4000"; // change to your actual endpoint
 
@@ -36,6 +38,43 @@ class gg extends Component {
     </Chart>
   );
 
+  lineRender = ({ resultSet }) => (
+    <Chart scale={{ x: { tickCount: 8 } }} height={400} data={this.stackedChartData(resultSet)} forceFit>
+      <Axis name="x" />
+      <Axis name="measure" />
+      <Tooltip crosshairs={{ type: 'y' }} />
+      <Geom type="line" position={`x*measure`} size={2} color="color" />
+    </Chart>
+  );
+
+  areaRender = ({ resultSet }) => (
+    <Chart scale={{ x: { tickCount: 8 } }} height={400} data={this.stackedChartData(resultSet)} forceFit>
+      <Axis name="x" />
+      <Axis name="measure" />
+      <Tooltip crosshairs={{ type: 'y' }} />
+      <Geom type="areaStack" position={`x*measure`} size={2} color="color" />
+    </Chart>
+  );
+
+  pieRender = ({ resultSet }) => (
+    <Chart height={400} data={resultSet.chartPivot()} forceFit>
+      <Coord type='theta' radius={0.75} />
+      {resultSet.seriesNames().map(s => (<Axis name={s.key} />))}
+      <Legend position='right' />
+      <Tooltip />
+      {resultSet.seriesNames().map(s => (<Geom type="intervalStack" position={s.key} color="category" />))}
+    </Chart>
+  );
+
+  tableRender = ({ resultSet }) => (
+    <Table
+      pagination={false}
+      columns={resultSet.tableColumns().map(c => ({ ...c, dataIndex: c.key }))}
+      dataSource={resultSet.tablePivot()}
+    />
+
+  );
+
   renderChart = (Component) => ({ resultSet, error }) => (
     (resultSet && <Component resultSet={resultSet} />) ||
     (error && error.toString()) ||
@@ -54,8 +93,7 @@ class gg extends Component {
               "dimension": "SymAgricUrbanaPoint.municipio",
               "operator": "equals",
               "values": [
-                "Remedios"
-              ]
+                this.props.municipio.charAt(0).toUpperCase() + this.props.municipio.slice(1)]
             }
           ]
         }}
