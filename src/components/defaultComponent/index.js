@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { Layout, Row, Col } from 'antd';
 import Navbar from '../navbar';
-import Breadcrumb1 from '../breadcrumb';
 import ModalAvanzado from '../modaAvanzado';
 import ModalEst1 from '../modalEst1';
 import ModalEst2 from '../modalEst2';
@@ -10,13 +9,9 @@ import ModalEst3 from '../modalEst3';
 import ModalEst4 from '../modalEst4';
 import ModalEst5 from '../modalEst5';
 import Footer1 from '../footer';
-import Card1 from '../card';
 import { GlobalStyleL } from '../../styles/Styles';
 
 const { Header, Footer, Content } = Layout;
-// import dropdown from './dropdown';
-// import grafico from './grafico';
-// import footer from './footer';
 class defaultComponent extends Component {
 	render() {
 		return (
@@ -28,29 +23,24 @@ class defaultComponent extends Component {
 						</Header>
 						<Content style={{ paddingLeft: '100px', paddingTop: '20px', paddingBottom: '20px', paddingRight: '100px' }}>
 							<Row>
-								<Col span={24}>
-									<Breadcrumb1 />
-								</Col>
-							</Row>
-							<Row>
-								<Col xs={{ span: 24}} sm={{ span: 24 }} md={{ span: 10, offset: 2 }} lg={{ span: 6, offset: 2 }}>
+								<Col xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 10, offset: 2 }} lg={{ span: 6, offset: 2 }}>
 									<ModalEst1 />
 								</Col>
-								<Col xs={{ span: 24}}  sm={{ span: 24 }} md={{ span: 10, offset: 2 }} lg={{ span: 6, offset: 2 }}>
+								<Col xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 10, offset: 2 }} lg={{ span: 6, offset: 2 }}>
 									<ModalEst2 />
 								</Col>
-								<Col xs={{ span: 24}} sm={{ span: 24 }}  md={{ span: 10, offset: 2 }} lg={{ span: 6, offset: 2 }}>
+								<Col xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 10, offset: 2 }} lg={{ span: 6, offset: 2 }}>
 									<ModalEst3 />
 								</Col>
 							</Row>
 							<Row style={{ marginTop: '60px' }}>
-								<Col xs={{ span: 24}}  sm={{ span: 24 }} md={{ span: 10, offset: 2 }} lg={{ span: 6, offset: 2 }}>
+								<Col xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 10, offset: 2 }} lg={{ span: 6, offset: 2 }}>
 									<ModalEst4 />
 								</Col>
-								<Col xs={{ span: 24}}  sm={{ span: 24 }} md={{ span: 10, offset: 2 }} lg={{ span: 6, offset: 2 }}>
+								<Col xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 10, offset: 2 }} lg={{ span: 6, offset: 2 }}>
 									<ModalEst5 />
 								</Col>
-								<Col xs={{ span: 24}}  sm={{ span: 24 }} md={{ span: 10, offset: 2 }} lg={{ span: 6, offset: 2 }}>
+								<Col xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 10, offset: 2 }} lg={{ span: 6, offset: 2 }}>
 									<ModalAvanzado />
 								</Col>
 							</Row>

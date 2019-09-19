@@ -42,7 +42,7 @@ class modalAvanzado extends Component {
     render() {
         return (
             <div>
-                <Card1 title='Estadística Avanzada' descripcion='En este tema se pueden realizar análisis estadísticos a partir de un gráfico construido con valores y categorías deseadas.' fotos={est6} show={this.showModal} />
+                <Card1 title='Estadística Avanzada' descripcion='En este tema se pueden realizar análisis estadísticos a partir de un gráfico construido con categorías y valores introducidos por el usuario.' fotos={est6} show={this.showModal} />
                 <Modal
                     title="Estadística Avanzada"
                     visible={this.state.visible}

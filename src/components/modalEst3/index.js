@@ -26,9 +26,9 @@ class modalEst3 extends Component {
     render() {
         return (
             <div>
-                <Card1 title='Estadística 3' descripcion='En este tema se pueden realizar análisis estadísticos.' fotos={est3} show={this.showModal} />
+                <Card1 title='Área por Tecnología' descripcion='En este tema se pueden realizar análisis estadísticos en cuanto al área de las formas productivas por tecnología en el municipio a partir de un gráfico de línea.' fotos={est3} show={this.showModal} />
                 <Modal
-                    title="Estadística 3"
+                    title="Área por Tecnología"
                     visible={this.state.visible}
                     onCancel={this.handleCancel}
                     footer={null}

@@ -26,9 +26,9 @@ class modalEst4 extends Component {
     render() {
         return (
             <div>
-                <Card1 title='Estadística 4' descripcion='En este tema se pueden realizar análisis estadísticos.' fotos={est4} show={this.showModal} />
+                <Card1 title='Área por Tecnología y Entidad' descripcion='En este tema se pueden realizar análisis estadísticos en cuanto al área de las formas productivas por tecnología y entidad en el municipio a partir de un gráfico de pastel.' fotos={est4} show={this.showModal} />
                 <Modal
-                    title="Estadística 4"
+                    title="Área por Tecnología y Entidad"
                     visible={this.state.visible}
                     onCancel={this.handleCancel}
                     footer={null}
