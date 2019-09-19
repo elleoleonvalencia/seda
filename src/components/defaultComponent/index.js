@@ -4,14 +4,14 @@ import { Layout, Row, Col } from 'antd';
 import Navbar from '../navbar';
 import Breadcrumb1 from '../breadcrumb';
 import ModalAvanzado from '../modaAvanzado';
+import ModalEst1 from '../modalEst1';
+import ModalEst2 from '../modalEst2';
+import ModalEst3 from '../modalEst3';
+import ModalEst4 from '../modalEst4';
+import ModalEst5 from '../modalEst5';
 import Footer1 from '../footer';
 import Card1 from '../card';
 import { GlobalStyleL } from '../../styles/Styles';
-import est1 from '../../images/est1.jpg'
-import est2 from '../../images/est2.jpg'
-import est3 from '../../images/est3.jpg'
-import est4 from '../../images/est4.jpg'
-import est5 from '../../images/est5.jpg'
 
 const { Header, Footer, Content } = Layout;
 // import dropdown from './dropdown';
@@ -34,21 +34,21 @@ class defaultComponent extends Component {
 							</Row>
 							<Row>
 								<Col xs={{ span: 24}} sm={{ span: 24 }} md={{ span: 10, offset: 2 }} lg={{ span: 6, offset: 2 }}>
-									<Card1 title='Est1' descripcion='est1' fotos={est1} />
+									<ModalEst1 />
 								</Col>
 								<Col xs={{ span: 24}}  sm={{ span: 24 }} md={{ span: 10, offset: 2 }} lg={{ span: 6, offset: 2 }}>
-									<Card1 title='Est2' descripcion='est2' fotos={est2} />
+									<ModalEst2 />
 								</Col>
 								<Col xs={{ span: 24}} sm={{ span: 24 }}  md={{ span: 10, offset: 2 }} lg={{ span: 6, offset: 2 }}>
-									<Card1 title='Est3' descripcion='est3' fotos={est3} />
+									<ModalEst3 />
 								</Col>
 							</Row>
 							<Row style={{ marginTop: '60px' }}>
 								<Col xs={{ span: 24}}  sm={{ span: 24 }} md={{ span: 10, offset: 2 }} lg={{ span: 6, offset: 2 }}>
-									<Card1 title='Est4' descripcion='est4' fotos={est4} />
+									<ModalEst4 />
 								</Col>
 								<Col xs={{ span: 24}}  sm={{ span: 24 }} md={{ span: 10, offset: 2 }} lg={{ span: 6, offset: 2 }}>
-									<Card1 title='Est5' descripcion='est5' fotos={est5} />
+									<ModalEst5 />
 								</Col>
 								<Col xs={{ span: 24}}  sm={{ span: 24 }} md={{ span: 10, offset: 2 }} lg={{ span: 6, offset: 2 }}>
 									<ModalAvanzado />
