@@ -11,11 +11,17 @@ class modalAvanzado extends Component {
         visible: false,
         measures: ["SymAgricUrbanaPoint.count"],
         dimensions: ["SymAgricUrbanaPoint.tecnologia"],
-        tipoGrafic: ''
+        tipoGrafic: '',
+        showGM: true,
+        showGD: true
     };
 
     camposMeasures = async measures => {
         await this.setState({ measures: measures })
+    }
+
+    showGrafic = async (value1, value2) => {
+        await this.setState({ showGM: value1, showGD: value2 })
     }
 
     camposDimensions = async dimensions => {
@@ -56,14 +62,12 @@ class modalAvanzado extends Component {
                             <br />
                         </Row>
                         <Row>
-                            <Dropdown camposMeasures={this.camposMeasures} camposDimensions={this.camposDimensions} tipoGrafic={this.tipoGraficFunction} />
+                            <Dropdown showGrafic={this.showGrafic} camposMeasures={this.camposMeasures} camposDimensions={this.camposDimensions} tipoGrafic={this.tipoGraficFunction} />
                         </Row>
                         <Row>
                             <br />
                         </Row>
-                        <Row>
-                            <GraficoGeneral camposMeasures={this.state.measures} camposDimensions={this.state.dimensions} tipoGrafic={this.state.tipoGrafic} municipio={this.props.match.params.municipio} />
-                        </Row>
+                        {this.state.showGM && this.state.showGD ? <Row><GraficoGeneral camposMeasures={this.state.measures} camposDimensions={this.state.dimensions} tipoGrafic={this.state.tipoGrafic} municipio={this.props.match.params.municipio} /></Row> : ''}
                     </div>
                 </Modal>
             </div>

@@ -1,17 +1,37 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import { Select, Row, Col } from 'antd';
+import { Select, Row, Col, Message } from 'antd';
 
 const { Option } = Select;
 
 class dropdown extends Component {
-
-    handleChangeMeasures = value => {
-        this.props.camposMeasures(value)
+    state = {
+        showGM: true,
+        showGD: true
     }
 
-    handleChangeDimensions = value => {
-        this.props.camposDimensions(value)
+    handleChangeMeasures = async value => {
+        if (value.length > 0) {
+            this.props.camposMeasures(value)
+            await this.setState({ showGM: true })
+            this.props.showGrafic(this.state.showGM, this.state.showGD)
+        } else {
+            Message.error('Debe seleccionar el valor por el eje Y.', 5);
+            await this.setState({ showGM: false })
+            this.props.showGrafic(this.state.showGM, this.state.showGD)
+        }
+    }
+
+    handleChangeDimensions = async value => {
+        if (value.length > 0) {
+            this.props.camposDimensions(value)
+            await this.setState({ showGD: true })
+            this.props.showGrafic(this.state.showGM, this.state.showGD)
+        } else {
+            Message.error('Debe seleccionar la categoría por el eje X.', 5);
+            await this.setState({ showGD: false })
+            this.props.showGrafic(this.state.showGM, this.state.showGD)
+        }
     }
 
     handleChangeGrafic = value => {
@@ -29,6 +49,7 @@ class dropdown extends Component {
                             onChange={this.handleChangeMeasures}
                             mode='multiple'
                             showArrow
+                            allowClear
                         >
                             <Option value="SymAgricUrbanaPoint.count">Cantidad</Option>
                             <Option value="SymAgricUrbanaPoint.areaTotal">Área</Option>
@@ -49,6 +70,7 @@ class dropdown extends Component {
                             onChange={this.handleChangeDimensions}
                             mode='multiple'
                             showArrow
+                            allowClear
                         >
                             <Option value="SymAgricUrbanaPoint.nombre">Nombre</Option>
                             <Option value="SymAgricUrbanaPoint.tecnologia">Tecnología</Option>
