@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import { Modal, Row, Col } from 'antd';
+import { Modal, Row, Avatar } from 'antd';
 import GraficoGeneral from './graficoGeneral';
-import est6 from '../../images/est6.jpg'
-import Card1 from '../card';
 import Dropdown from '../dropdown';
+import EstAvanz from '../../images/est-avanz.png';
 
 class modalAvanzado extends Component {
     state = {
@@ -48,7 +47,7 @@ class modalAvanzado extends Component {
     render() {
         return (
             <div>
-                <Card1 title='Estadística Avanzada' descripcion='En este tema se pueden realizar análisis estadísticos a partir de un gráfico construido con categorías y valores introducidos por el usuario.' fotos={est6} show={this.showModal} />
+                <Avatar title='Estadística Avanzada' className='card_graf1' size={100} style={{ margin: 5, float: 'right' }} src={EstAvanz} alt='Estadística Avanzada' onClick={this.showModal}/>
                 <Modal
                     title="Estadística Avanzada"
                     visible={this.state.visible}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import { Layout, Row, Col, Select, BackTop, Avatar } from 'antd';
+import { Layout, Row, Col, Select, BackTop } from 'antd';
 import Navbar from '../navbar';
 import ModalEst1 from '../modalEst1';
 import ModalEst2 from '../modalEst2';
@@ -9,8 +9,7 @@ import ModalEst4 from '../modalEst4';
 import ModalEst5 from '../modalEst5';
 import Footer1 from '../footer';
 import { GlobalStyleL } from '../../styles/Styles';
-import EstAvanz from '../../images/est-avanz.png';
-import EstAvanz1 from '../../images/est-avanz1.png';
+import ModaAvanzado from '../modaAvanzado';
 
 const { Option } = Select;
 
@@ -42,7 +41,7 @@ class defaultComponent extends Component {
 										</Row>
 										<Row>
 											<Col span={22} push={2}>
-												<Avatar title='Estadística Avanzada' className='card_graf1' size={100} style={{ margin: 5, float: 'right' }} src={EstAvanz} alt='Estadística Avanzada'/>
+												<ModaAvanzado />
 											</Col>
 											<Col span={2} pull={22}>
 											</Col>

@@ -23,6 +23,7 @@ const GlobalStyleL = styled.div`
 &#components-layout-demo-top .card_graf1:hover {
   transform: scale(1.3);
   box-shadow: 0 0 5px 0 #3aa1ff;
+  cursor: pointer;
 }
 .card_graf1 {
 transition: all 1s;

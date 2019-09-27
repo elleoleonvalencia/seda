@@ -7,7 +7,7 @@ class footer1 extends Component {
         return (
             <div>
                 <Row style={{ textAlign: 'center' }}>
-                    <h1>&copy;  2019 Derechos Reservados, Empresa de Proyectos e Ingeniería del MINAG, UEB Villa Clara</h1>
+                    <h1>&copy;  {new Date().getFullYear()} Derechos Reservados, Empresa de Proyectos e Ingeniería del MINAG, UEB Villa Clara</h1>
                 </Row>
             </div>
         );
