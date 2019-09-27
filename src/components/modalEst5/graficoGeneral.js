@@ -3,6 +3,7 @@ import cubejs from '@cubejs-client/core';
 import { QueryRenderer } from '@cubejs-client/react';
 import { Spin } from 'antd';
 import { Row, Col, Statistic, Table } from 'antd';
+import { Chart, Axis, Tooltip, Geom, Coord, Legend } from 'bizcharts';
 import "antd/dist/antd.css";
 
 const API_URL = "http://192.168.0.10:4000"; // change to your actual endpoint
@@ -12,15 +13,16 @@ const cubejsApi = cubejs(
     { apiUrl: API_URL + "/cubejs-api/v1" }
 );
 class gg extends Component {
-    tableRender = ({ resultSet }) => (
-        <Table
-            pagination={false}
-            columns={resultSet.tableColumns().map(c => ({ ...c, dataIndex: c.key }))}
-            dataSource={resultSet.tablePivot()}
-        />
 
+    pieRender = ({ resultSet }) => (
+        <Chart height={400} data={resultSet.chartPivot()} forceFit>
+            <Coord type='theta' radius={0.75} />
+            {resultSet.seriesNames().map(s => (<Axis name={s.key} />))}
+            <Legend position='right' />
+            <Tooltip />
+            {resultSet.seriesNames().map(s => (<Geom type="intervalStack" position={s.key} color="category" />))}
+        </Chart>
     );
-
     renderChart = (Component) => ({ resultSet, error }) => (
         (resultSet && <Component resultSet={resultSet} />) ||
         (error && error.toString()) ||
@@ -54,7 +56,7 @@ class gg extends Component {
                     ]
                 }}
                 cubejsApi={cubejsApi}
-                render={this.renderChart(this.tableRender)}
+                render={this.renderChart(this.pieRender)}
             />);
     }
 }

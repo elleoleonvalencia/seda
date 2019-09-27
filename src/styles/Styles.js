@@ -4,16 +4,50 @@ import styled from 'styled-components'
 
 const GlobalStyleL = styled.div`
 &#components-layout-demo-top .logo {
-  width: 120px;
+  width: 150px;
   height: 31px;
   float: left;
   margin-right: 50px;
+  font-family: Times New Roman, serif;
+  font-weight: 900;
+  font-size: 20px;
+}
+&#components-layout-demo-top .card_graf:hover {
+    transform: scale(1.010);
+    box-shadow: 0 0 10px 0 #3aa1ff;
+}
+.card_graf {
+  transition: all 0.7s;
+}
+
+&#components-layout-demo-top .card_graf1:hover {
+  transform: scale(1.3);
+  box-shadow: 0 0 5px 0 #3aa1ff;
+}
+.card_graf1 {
+transition: all 1s;
+}
+&#components-layout-demo-top .resumen {
+  background-color: #ffffff;
+  font-family: Times New Roman, serif;
+  font-weight: 900;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 0 #b8bfc6;
 }
 &#components-layout-demo-top .menu-inicio {
   float: right;
 }
 &#components-layout-demo-top .ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
   background-color: transparent;
+  color: rgba(255, 255, 255, 0.65);
+}
+&#components-layout-demo-top .ant-menu.ant-menu-dark .ant-menu-item-active , .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-active {
+  background-color: transparent;
+  color: #ffffff;
+}
+&#components-layout-demo-top .ant-menu-dark .ant-menu-item-selected .anticon {
+  color: inherit;
 }
 &#components-layout-demo-top .ant-menu-item {
   margin-left: 10px;  
@@ -32,38 +66,7 @@ const GlobalStyleL = styled.div`
   min-height: 0;
   background: #fff;
 }
-&#components-layout-demo-top .card__three {
-  &::before,
-  &::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform: scale3d(0, 0, 1);
-    transition: transform .3s ease-out 0s;
-    background: rgba(255, 255, 255, .1);
-    content: '';
-    pointer-events: none;
-  }
-
-  &::before {
-    transform-origin: left top;
-  }
-
-  &::after {
-    transform-origin: right bottom;
-  }
-
-  &:hover,
-  &:focus {
-    &::before,
-    &::after {
-      transform: scale3d(1, 1, 1);
-    }
-  }
-}
-`
+`;
 const Imagen = styled.img`
   width: 55px;
   height: 55px;
