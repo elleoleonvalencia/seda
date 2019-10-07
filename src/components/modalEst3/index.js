@@ -7,7 +7,7 @@ class modalEst3 extends Component {
     render() {
         return (
             <div>
-                <Card1 title='Área por Tecnología' descripcion={<GraficoGeneral municipio={this.props.match.params.municipio} />} />
+                <Card1 title='Área por Tecnología' descripcion={<GraficoGeneral provincia={this.props.match.params.provincia} municipio={this.props.match.params.municipio} />} />
             </div>
         );
     }

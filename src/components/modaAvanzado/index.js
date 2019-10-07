@@ -47,7 +47,7 @@ class modalAvanzado extends Component {
     render() {
         return (
             <div>
-                <Avatar title='Estadística Avanzada' className='card_graf1' size={100} style={{ margin: 5, float: 'right' }} src={EstAvanz} alt='Estadística Avanzada' onClick={this.showModal}/>
+                <Avatar title='Estadística Avanzada' className='card_graf1' size={100} style={{ margin: 5, float: 'right' }} src={EstAvanz} alt='Estadística Avanzada' onClick={this.showModal} />
                 <Modal
                     title="Estadística Avanzada"
                     visible={this.state.visible}
@@ -66,7 +66,7 @@ class modalAvanzado extends Component {
                         <Row>
                             <br />
                         </Row>
-                        {this.state.showGM && this.state.showGD ? <Row><GraficoGeneral camposMeasures={this.state.measures} camposDimensions={this.state.dimensions} tipoGrafic={this.state.tipoGrafic} municipio={this.props.match.params.municipio} /></Row> : ''}
+                        {this.state.showGM && this.state.showGD ? <Row><GraficoGeneral camposMeasures={this.state.measures} camposDimensions={this.state.dimensions} tipoGrafic={this.state.tipoGrafic} provincia={this.props.match.params.provincia} municipio={this.props.match.params.municipio} /></Row> : ''}
                     </div>
                 </Modal>
             </div>

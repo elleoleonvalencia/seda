@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import cubejs from '@cubejs-client/core';
 import { QueryRenderer } from '@cubejs-client/react';
 import { Spin } from 'antd';
@@ -55,6 +55,13 @@ class gg extends Component {
                         "SymAgricUrbanaPoint.tecnologia"
                     ],
                     "filters": [
+                        {
+                            "dimension": "SymAgricUrbanaPoint.provincia",
+                            "operator": "equals",
+                            "values": [
+                                this.props.provincia
+                            ]
+                        },
                         {
                             "dimension": "SymAgricUrbanaPoint.municipio",
                             "operator": "equals",

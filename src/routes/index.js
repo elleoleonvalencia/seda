@@ -9,7 +9,7 @@ import defaultComponent from '../components/defaultComponent/index';
 const Router = () => (
     <BrowserRouter>
         <Switch>
-            <Route path="/:municipio" component={defaultComponent} />
+            <Route path="/:provincia/:municipio" component={defaultComponent} />
             {/* <Route exact path="/" component={defaultComponent} />
             <Route path="/Las Cuevas" component={orgLasCuevasMan} />            
             <Route path="/La Herradura" component={orgLaHerraduraMan} />

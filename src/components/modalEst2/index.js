@@ -7,7 +7,7 @@ class modalEst2 extends Component {
     render() {
         return (
             <div>
-                <Card1 title='Cantidad por Tecnología y Entidad' descripcion={<GraficoGeneral municipio={this.props.match.params.municipio} />} />
+                <Card1 title='Cantidad por Tecnología y Entidad' descripcion={<GraficoGeneral provincia={this.props.match.params.provincia} municipio={this.props.match.params.municipio} />} />
             </div>
         );
     }

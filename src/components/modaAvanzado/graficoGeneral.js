@@ -125,6 +125,13 @@ class gg extends Component {
           "dimensions": this.props.camposDimensions,
           "filters": [
             {
+              "dimension": "SymAgricUrbanaPoint.provincia",
+              "operator": "equals",
+              "values": [
+                this.props.provincia
+              ]
+            },
+            {
               "dimension": "SymAgricUrbanaPoint.municipio",
               "operator": "equals",
               "values": [
